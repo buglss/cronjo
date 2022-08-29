@@ -1,0 +1,32 @@
+{
+  "name": "cronjo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "keywords": [
+    "cron",
+    "crontab",
+    "cronjob"
+  ],
+  "author": {
+    "name": "Levent Sencer Şahin",
+    "email": "l.sencer.sahin@gmail.com",
+    "url": "https://buglss.github.io"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "mocha": "^9.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buglss/cronjo.git"
+  },
+  "homepage": "https://buglss.github.io/npm/cronjo/",
+  "dependencies": {
+    "cronti": "^3.1.4",
+    "long-timeout": "^0.1.1"
+  }
+}
