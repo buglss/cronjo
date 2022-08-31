@@ -1,53 +1,27 @@
-/**
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- **/
-
-/**
- * REQUIRE BLOCK START
- */
-const { scheduleJob } = require("node-schedule")
 const cronti = require("cronti")
-/**
- * REQUIRE BLOCK END
- */
+const schedule = require("./src/schedule")
+const cancel = require("./src/cancel")
+const fire = require("./lib/fire-date")
+const next = require("./lib/next-date")
 
-/**
- * It translates daily expressible recipes on the calendar into crontime expression.
- * Produces a valid crontime expression.
- * In summary:
- *  creates a crontime that will run at regular intervals between two dates;
- *  enter valid crontime expression get crontime expression;
- *  generate crontime of the specific date;
- *  generate crontime of the specific date;
- *  create crontime with various combinations of month, week, weekdays, hours, minutes and tick and generates the cron time for the week the date is in.
- * @param {Function} handler Scheduled task. The function to be called when the time comes.
- * @param {Number|String} method Metod index or name. onWeek, onIntervalTime, onTime, onCrontime, onDate
- * @param {Array} args Arguments to metods
- * 
- * @returns {String} Crontime
- * 
- * @summary Produces a valid crontime expression.
- * 
- * @license Apache-2.0
- */
-module.exports = function(handler, method, ...args) {
-    if(typeof handler !== "function") return false
+let localeStorage = {}
 
+module.exports = function({ job, name, firstDayOfWeek = 0 } = {}, method, ...args) {
+    if(!arguments.length) return localeStorage
     const expression = cronti(method, ...args)
-
-    if(!expression) return false
-
-    return scheduleJob(expression, handler);
+    const id = Date.now()
+    const timer = schedule(expression, job, firstDayOfWeek, id)
+    localeStorage[id] = {
+        id,
+        expression,
+        job,
+        firstDayOfWeek,
+        name: name || `${id} Job`,
+        cancel() { return cancel(timer) },
+        fireDate({ firstDayOfWeek = 0 } = {}) { return fire(expression, { firstDayOfWeek }) },
+        nextDates({ deep = 5, firstDayOfWeek = 0 } = {}) { return next(expression, { deep, firstDayOfWeek }) }
+    }
+    return localeStorage[id]
 }
 
 /*
