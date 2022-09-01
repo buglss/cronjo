@@ -12,25 +12,15 @@
  * limitations under the License.
  **/
 
-/** Require Base */
-const lt = require('long-timeout')
-/** * */
-
-/**
- * Returns true or error.
- * 
- * @param {Object} timer The timer object of lont-timeout package.
- * 
- * @returns {Boolean|Error} Returns true or error.
- * 
- * @summary Returns true or error.
- * 
+/*
  * @license Apache-2.0
  */
-module.exports = function(timer) {
-    if(!timer) throw new Error(`[${timer}]: Invalid timer parameter. Timer required.`)
-    try {
-        lt.clearTimeout(timer)
-        return true
-    } catch(error) { return error }
-}
+
+const assert = require("assert")
+const fireDate = require("../lib/fire-date")
+
+describe("fireDate", function() {
+    it(`fireDate("25 2-5 29,31 9 *", { firstDayOfWeek: 1, fireDate: new Date("2022-08-20 22:55") }) --> Returns the date of the invocation for Turkey first day of week and for 20.08.2022 22:55.`, function() {
+        assert.deepEqual(fireDate("25 2-5 29,31 9 *", { firstDayOfWeek: 1, fireDate: new Date("2022-08-20 22:55") }), new Date("2022-09-29 02:25:00"))
+    })
+})

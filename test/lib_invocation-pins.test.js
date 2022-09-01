@@ -12,25 +12,21 @@
  * limitations under the License.
  **/
 
-/** Require Base */
-const lt = require('long-timeout')
-/** * */
-
-/**
- * Returns true or error.
- * 
- * @param {Object} timer The timer object of lont-timeout package.
- * 
- * @returns {Boolean|Error} Returns true or error.
- * 
- * @summary Returns true or error.
- * 
+/*
  * @license Apache-2.0
  */
-module.exports = function(timer) {
-    if(!timer) throw new Error(`[${timer}]: Invalid timer parameter. Timer required.`)
-    try {
-        lt.clearTimeout(timer)
-        return true
-    } catch(error) { return error }
-}
+
+const assert = require("assert")
+const invocationPins = require("../lib/invocation-pins")
+
+describe("invocationPins", function() {
+    it(`invocationPins("25 2-5 29,31 9 *") --> Returns the timer pins of the invocation for crontime expression.`, function() {
+        assert.deepEqual(invocationPins("25 2-5 29,31 9 *"), {
+            minutes: [25],
+            hours: [2, 3, 4, 5],
+            daysOfMonth: [29, 31],
+            months: [9],
+            daysOfWeek: [0, 1, 2, 3, 4, 5, 6]
+        })
+    })
+})
