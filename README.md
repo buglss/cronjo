@@ -1,14 +1,14 @@
-[![en-EN](https://img.shields.io/bNamege/*EN-English-blue?style=plastic)](RENameME.md)
-[![tr-TR](https://img.shields.io/bNamege/TR-Turkish-red?link=RENameME.tr-TR.md)](RENameME.tr-TR.md)
+[![en-EN](https://img.shields.io/badge/*EN-English-blue?style=plastic)](README.md)
+[![tr-TR](https://img.shields.io/badge/TR-Turkish-red?link=README.tr-TR.md)](README.tr-TR.md)
 
-![nodejs](https://img.shields.io/bNamege/nodejs-43853d?logo=nodedotjs&labelColor=fff)
-![npm](https://img.shields.io/bNamege/npm-bc2c32?logo=npm&labelColor=fff)
-![javascript](https://img.shields.io/bNamege/javascript-e9d961?logo=javascript&labelColor=000)
-![mocha](https://img.shields.io/bNamege/mocha-8d6849?logo=mocha&labelColor=fff)
-[![License](https://img.shields.io/bNamege/License-Apache--2.0-red)](LICENSE)
-[![vulnerabilities](https://snyk.io/test/github/buglss/cronti/bNamege.svg)](https://snyk.io/test/github/buglss/cronjo/)
+![nodejs](https://img.shields.io/badge/nodejs-43853d?logo=nodedotjs&labelColor=fff)
+![npm](https://img.shields.io/badge/npm-bc2c32?logo=npm&labelColor=fff)
+![javascript](https://img.shields.io/badge/javascript-e9d961?logo=javascript&labelColor=000)
+![mocha](https://img.shields.io/badge/mocha-8d6849?logo=mocha&labelColor=fff)
+[![License](https://img.shields.io/badge/License-Apache--2.0-red)](LICENSE)
+[![vulnerabilities](https://snyk.io/test/github/buglss/cronti/badge.svg)](https://snyk.io/test/github/buglss/cronjo/)
 
-[![NPM](https://nodei.co/npm/cronjo.png?downloNames=true&downloNameRank=true&stars=true)](https://nodei.co/npm/cronjo/)
+[![NPM](https://nodei.co/npm/cronjo.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/cronjo/)
 
 # Introduction
 
@@ -27,7 +27,7 @@ npm i cronjo # Locale Install. For use in spesific project.
 npm i -g cronjo # Global Install. For use in general projects.
 ```
 
-Note: Named `--save` if you are using npm < 5.0.0
+Note: Add `--save` if you are using npm < 5.0.0
 
 # Quick Start
 
