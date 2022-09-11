@@ -401,7 +401,7 @@ By default, the start is Sunday.
 # Feedback
 
 Please give your feedback about the package.
-Please create [issues](/cronjo/issues) when you encounter any bugs.
+Please create [issues](https://github.com/buglss/cronjo/issues) when you encounter any bugs.
 I will respond to your feedback as soon as possible.
 
 # Authors
