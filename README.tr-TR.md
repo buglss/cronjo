@@ -400,7 +400,7 @@ Varsayılan olarak pazar günü başlangıç kabul edilir.
 # Geri Bildirim
 
 Lütfen paket ile ilgili geri bildirimlerinizi yapın.
-Herhangi bir hata(bug) ile karşılaştığınızda lütfen [issues](issues) oluşturun.
+Herhangi bir hata(bug) ile karşılaştığınızda lütfen [issues](https://github.com/buglss/cronjo/issues) oluşturun.
 En kısa sürede geri bildirimlerinize cevap vereceğim.
 
 # Yazarlar
