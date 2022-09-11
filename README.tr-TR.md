@@ -112,37 +112,6 @@ console.log(cronjo({method: "HELPERS" /* VEYA method: -1*/}))
 
 # Dokümantasyon
 
-- [Dokümantasyon](#dokümantasyon)
-  - [job](#job)
-    - [Girdi](#girdi)
-    - [Çıktı <object>](#çıktı-object)
-    - [Örnek](#örnek)
-  - [options](#options)
-  - [options.method](#optionsmethod)
-  - [options.method.onWeek](#optionsmethodonweek)
-    - [Girdi](#girdi-1)
-    - [Çıktı <object>](#çıktı-object-1)
-    - [Örnek](#örnek-1)
-  - [options.method.onIntervalTime](#optionsmethodonintervaltime)
-    - [Girdi](#girdi-2)
-    - [Çıktı <object>](#çıktı-object-2)
-    - [Örnek](#örnek-2)
-  - [options.method.onTime](#optionsmethodontime)
-    - [Girdi](#girdi-3)
-    - [Çıktı <object>](#çıktı-object-3)
-    - [Örnek](#örnek-3)
-  - [options.method.onCrontime](#optionsmethodoncrontime)
-    - [Girdi](#girdi-4)
-    - [Çıktı <object>](#çıktı-object-4)
-    - [Örnek](#örnek-4)
-  - [options.method.onDate](#optionsmethodondate)
-    - [Girdi](#girdi-5)
-    - [Çıktı <object>](#çıktı-object-5)
-    - [Örnek](#örnek-5)
-  - [options.job](#optionsjob)
-  - [options.name](#optionsname)
-  - [options.firstDayOfWeek](#optionsfirstdayofweek)
-
 ``cronjo`` fonksiyonu, ilk parametrede job fonksiyonu, options veya "HELPERS" değerini alabilir veya hiç değer almaz.
 Eğer job fonksiyonu ile kullanılırsa ikinci parametreye crontime ifadesi yazılmalıdır.
 Eğer options değerleri ile kullanılırsa sonraki parametreler [cronti](https://www.npmjs.com/package/cronti) paketindeki isterlere uygun şekilde doldurulur.

@@ -112,37 +112,6 @@ console.log(cronjo({method: "HELPERS" /* OR method: -1*/}))
 
 # Documentation
 
-- [Documentation](#documentation)
-  - [job](#job)
-    - [Input](#input)
-    - [Output <object>](#output-object)
-    - [Example](#example)
-  - [options](#options)
-  - [options.method](#optionsmethod)
-  - [options.method.onWeek](#optionsmethodonweek)
-    - [Input](#input-1)
-    - [Output <object>](#output-object-1)
-    - [Example](#example-1)
-  - [options.method.onIntervalTime](#optionsmethodonintervaltime)
-    - [Input](#input-2)
-    - [Output <object>](#output-object-2)
-    - [Example](#example-2)
-  - [options.method.onTime](#optionsmethodontime)
-    - [Input](#input-3)
-    - [Output <object>](#output-object-3)
-    - [Example](#example-3)
-  - [options.method.onCrontime](#optionsmethodoncrontime)
-    - [Input](#input-4)
-    - [Output <object>](#output-object-4)
-    - [Example](#example-4)
-  - [options.method.onDate](#optionsmethodondate)
-    - [Input](#input-5)
-    - [Output <object>](#output-object-5)
-    - [Example](#example-5)
-  - [options.job](#optionsjob)
-  - [options.name](#optionsname)
-  - [options.firstDayOfWeek](#optionsfirstdayofweek)
-
 The ``cronjo`` function can take the job function, options, or "HELPERS" in the first parameter, or take no value at all.
 If it is used with the job function, the crontime expression should be written in the second parameter.
 If used with options values, the next parameters are filled in accordance with the requirements in the [cronti](https://www.npmjs.com/package/cronti) package.
