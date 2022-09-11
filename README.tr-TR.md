@@ -134,7 +134,7 @@ Job fonksiyonuna zamanlanmış işin id'si parametre olarak gönderilir.
 |      job                |  Function  |   evet     |                                  Zamanlanmış işin fonksiyonu                                   |
 |      expression         |  String    |   evet     |                                      Zamanlanmış işin kurulacağı crontime ifadesi              |
 
-#### Çıktı <object>
+#### Çıktı (object)
 
 | Parametre      |  Tip     |     Açıklama                                                        |
 | :------------: | :------: | :-----------------------------------------------------------------: |
@@ -194,7 +194,7 @@ Parametre olarak geçerli bir tarih değeri gönderilmelidir. Tik değeri için 
 |      args.\<tick\>      | Number |   hayır    |                                      Tarihten çıkarılacak gün sayıs                                      |
 | args.\<firstDayOfWeek\> | String |   hayır    | Haftanın ilk günü. 0 ile 6 arasında değerler alır. <sayı>FD değerini alır. Varsayılan değer pazartesidir |
 
-#### Çıktı <object>
+#### Çıktı (object)
 
 | Parametre      |  Tip     |     Açıklama                                                        |
 | :------------: | :------: | :-----------------------------------------------------------------: |
@@ -235,7 +235,7 @@ Step parametresi için paterne uygun bir string değeri kullanabilirsiniz.
 |  args.\<endDate\>  |          Date           |    evet    |              Cron bitiş tarihi              |
 |   args.\<step\>    | String <.d \| .h \| .m> |   hayır    | Hangi adımlarda çalıştırılacağını belirtir. |
 
-#### Çıktı <object>
+#### Çıktı (object)
 
 | Parametre      |  Tip     |     Açıklama                                                        |
 | :------------: | :------: | :-----------------------------------------------------------------: |
@@ -288,7 +288,7 @@ Tick değeri için herhangi bir sayısal değer kullanılabilir.
 |      args.\<tick\>      |     Number      |   hayır    |               Tarihten çıkarılacak gün sayısı. Ay ve hafta parametreleri olmak zorundadır                |
 | args.\<firstDayOfWeek\> |     String      |   hayır    | Haftanın ilk günü. 0 ile 6 arasında değerler alır. <sayı>FD değerini alır. Varsayılan değer pazartesidir |
 
-#### Çıktı <object>
+#### Çıktı (object)
 
 | Parametre      |  Tip     |     Açıklama                                                        |
 | :------------: | :------: | :-----------------------------------------------------------------: |
@@ -321,7 +321,7 @@ Geçerli crontime ifadesine göre zamanlanmış iş olururken kullanılır.
 | :---------------: | :----: | :--------: | :--------------: |
 | args.\<crontime\> | String |    evet    | Crontime ifadesi |
 
-#### Çıktı <object>
+#### Çıktı (object)
 
 | Parametre      |  Tip     |     Açıklama                                                        |
 | :------------: | :------: | :-----------------------------------------------------------------: |
@@ -360,7 +360,7 @@ Parametre olarak geçerli bir tarih değeri gönderilmelidir.
 |     args.\<tick\>      | Number  |   hayır    | Tarihten çıkarılacak gün sayısı. Ay ve hafta parametreleri olmak zorundadır |
 | args.\<isMonthOfDate\> | Boolean |   hayır    |                        Yalnızca tarihin ayında yürüt                        |
 
-#### Çıktı <object>
+#### Çıktı (object)
 
 | Parametre      |  Tip     |     Açıklama                                                        |
 | :------------: | :------: | :-----------------------------------------------------------------: |

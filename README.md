@@ -135,7 +135,7 @@ The id of the scheduled job is sent to the job function as a parameter.
 |      job                |  Function  |   yes     |                                  Function of scheduled job                                   |
 |      expression         |  String    |   yes     |                                      The crontime expression to set up the scheduled job     |
 
-#### Output <object>
+#### Output (object)
 
 | Parameter      |  Type    |     Description                                                                |
 | :------------: | :------: | :----------------------------------------------------------------------------: |
@@ -195,7 +195,7 @@ A valid date value must be sent as a parameter. Any numeric value can be used fo
 |      args.\<tick\>      | Number |   no    |                                      Tarihten çıkarılacak gün sayıs                                      |
 | args.\<firstDayOfWeek\> | String |   no    | Haftanın ilk günü. 0 ile 6 arasında değerler alır. <sayı>FD değerini alır. Varsayılan değer pazartesidir |
 
-#### Output <object>
+#### Output (object)
 
 | Parameter      |  Type    |     Description                                                                |
 | :------------: | :------: | :----------------------------------------------------------------------------: |
@@ -236,7 +236,7 @@ You can use a string value suitable for the pattern for the Step Parameter.
 |  args.\<endDate\>  |          Date           |    yes    |              Cron end date                    |
 |   args.\<step\>    | String <.d \| .h \| .m> |   no    | Specifies which steps to run.                |
 
-#### Output <object>
+#### Output (object)
 
 | Parameter      |  Type    |     Description                                                                |
 | :------------: | :------: | :----------------------------------------------------------------------------: |
@@ -289,7 +289,7 @@ Any numeric value can be used for the tick value.
 |      args.\<tick\>      |     Number      |   no    |               The number of days to subtract from the date. Must have month and week parameters                    |
 | args.\<firstDayOfWeek\> |     String      |   no    | The first day of the week. It takes values between 0 and 6. Gets the <number>FD value. The default value is monday |
 
-#### Output <object>
+#### Output (object)
 
 | Parameter      |  Type    |     Description                                                                |
 | :------------: | :------: | :----------------------------------------------------------------------------: |
@@ -322,7 +322,7 @@ Used when there is a scheduled job based on the valid crontime expression.
 | :---------------: | :----: | :--------: | :----------------: |
 | args.\<crontime\> | String |    yes    | Crontime expression |
 
-#### Output <object>
+#### Output (object)
 
 | Parameter      |  Type    |     Description                                                                |
 | :------------: | :------: | :----------------------------------------------------------------------------: |
@@ -361,7 +361,7 @@ A valid date value must be sent as a parameter.
 |     args.\<tick\>      | Number  |   no       | The number of days to subtract from the date. Must have month and week parameters |
 | args.\<isMonthOfDate\> | Boolean |   no       |                        Execute only in month of date                              |
 
-#### Output <object>
+#### Output (object)
 
 | Parameter      |  Type    |     Description                                                                |
 | :------------: | :------: | :----------------------------------------------------------------------------: |
