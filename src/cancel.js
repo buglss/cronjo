@@ -32,5 +32,5 @@ module.exports = function(timer) {
     try {
         lt.clearTimeout(timer)
         return true
-    } catch(error) { return error }
+    } catch(error) { throw new Error(error) }
 }
