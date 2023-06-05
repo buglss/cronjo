@@ -43,12 +43,12 @@ let localeStorage = {}
 module.exports = function({ method = "onCrontime", job, name, firstDayOfWeek = 0 } = {}, ...args) {
     if(!arguments.length) return localeStorage
     if(arguments[0] === "HELPERS" || method === "HELPERS" || method === -1) {
-        let helpers = {}
-        require("fs").readdirSync(__dirname + "/lib/").forEach(file => {
-            file = file.split(".").slice(0, -1).join(".")
-            helpers[file.replace(/-\w/g, x => x[1].toUpperCase())] = require("./lib/" + file)
+        let helpers = ["fire-date", "invocation-pins", "next-date", "options", "parse-field"]
+        let helperDictionary = {}
+        helpers.forEach(helper => {
+            helperDictionary[helper.replace(/-\w/g, x => x[1].toUpperCase())] = require("./lib/" + helper)
         })
-        return helpers
+        return helperDictionary
     }
     if(typeof arguments[0] === "function") job = arguments[0]
     const expression = cronti(method, ...args)
