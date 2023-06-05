@@ -25,7 +25,7 @@
     "url": "https://github.com/buglss/cronjo.git"
   },
   "dependencies": {
-    "cronti": "^3.1.4",
+    "cronti": "^3.1.5",
     "long-timeout": "^0.1.1"
   }
 }
