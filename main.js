@@ -55,7 +55,7 @@ module.exports = function({ method = "onCrontime", job, name, firstDayOfWeek = 0
     if(typeof arguments[0] === "function") job = arguments[0]
     const expression = cronti(method, ...args)
     const id = Date.now()
-    // const timer = 
+
     localeStorage[id] = {
         id,
         expression,
@@ -74,6 +74,6 @@ module.exports = function({ method = "onCrontime", job, name, firstDayOfWeek = 0
         fireDate({ firstDayOfWeek = 0 } = {}) { return fire(expression, { firstDayOfWeek }) },
         nextDates({ deep = 5, firstDayOfWeek = 0 } = {}) { return next(expression, { deep, firstDayOfWeek }) }
     }
-    schedule({ schedule: localeStorage[id], expression, handler: job, firstDayOfWeek, id })
-    return localeStorage[id]
+    
+    return schedule({ schedule: localeStorage[id], expression, handler: job, firstDayOfWeek, id })
 }
