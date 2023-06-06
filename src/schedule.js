@@ -40,5 +40,5 @@ const self = module.exports = function({ schedule, expression, handler, firstDay
         self({ schedule, expression, handler, firstDayOfWeek, id })
         handler(id)
     }, (nextDates[0] < now ? nextDates[1] : nextDates[0]) - new Date())
-    return schedule.timer
+    return schedule
 }
