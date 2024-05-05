@@ -23,4 +23,8 @@ describe("fireDate", function() {
     it(`fireDate("25 2-5 29,31 9 *", { firstDayOfWeek: 1, fireDate: new Date("2022-08-20 22:55") }) --> Returns the date of the invocation for Turkey first day of week and for 20.08.2022 22:55.`, function() {
         assert.deepEqual(fireDate("25 2-5 29,31 9 *", { firstDayOfWeek: 1, fireDate: new Date("2022-08-20 22:55") }), new Date("2022-09-29 02:25:00"))
     })
+
+    it(`fireDate("00 21 * * 0", { firstDayOfWeek: 0, fireDate: new Date("2024-05-05 22:40") }) --> Returns the date of the invocation for first day is sunday of week and for 05.05.2024 22:40.`, function() {
+        assert.deepEqual(fireDate("00 21 * * 0", { firstDayOfWeek: 0, fireDate: new Date("2024-05-05 22:40") }), new Date("2024-05-12 21:00:00"))
+    })
 })
